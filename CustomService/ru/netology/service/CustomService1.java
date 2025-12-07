@@ -1,0 +1,21 @@
+package ru.netology.service;
+
+public class CustomService1 {
+    public static int calculateCustoms(int price) {
+        int feeInKop = price * 1;
+        int feeInRubls = feeInKop / 100;
+        return feeInRubls;
+    }
+
+    public static int calculateCustoms1(int weight) {
+        int feeWeight = weight * 100;
+        return feeWeight;
+    }
+
+    public static int calculateTotal(int weight, int price) {
+        int totalFee = calculateCustoms(price);
+        int totalWeight = calculateCustoms1(weight);
+        int totalPrice = totalFee + totalWeight;
+        return totalPrice;
+    }
+}
