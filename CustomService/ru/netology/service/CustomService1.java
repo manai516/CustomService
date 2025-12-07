@@ -4,8 +4,10 @@ public class CustomService1 {
 
     public static final int FEE_PER_KILOGRAM = 100;
 
+    public static final int FEE_PER_RUBLE_IN_KOPEKS = 1;
+
     public static int calculateCustoms(int price) {
-        int feeInKop = price * 1;
+        int feeInKop = price * FEE_PER_RUBLE_IN_KOPEKS;
         int feeInRubls = feeInKop / 100;
         return feeInRubls;
     }
